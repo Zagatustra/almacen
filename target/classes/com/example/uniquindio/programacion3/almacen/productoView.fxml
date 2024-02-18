@@ -1,12 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="461.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane animated="false" layoutX="14.0" layoutY="14.0" prefHeight="217.0" prefWidth="350.0" text="Datos del Producto">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="353.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="31.0" text="Codigo" />
+                  <Label layoutX="15.0" layoutY="61.0" text="Nombre" />
+                  <Label layoutX="14.0" layoutY="93.0" text="Descripción" />
+                  <Label layoutX="14.0" layoutY="121.0" text="Valor" />
+                  <Label layoutX="14.0" layoutY="152.0" text="Cantidad" />
+                  <TextField fx:id="txtCodigo" layoutX="98.0" layoutY="27.0" prefHeight="25.0" prefWidth="235.0" />
+                  <TextField fx:id="txtNombreProducto" layoutX="98.0" layoutY="59.0" prefHeight="25.0" prefWidth="235.0" />
+                  <TextField fx:id="txtDescripcion" layoutX="99.0" layoutY="89.0" prefHeight="25.0" prefWidth="234.0" />
+                  <TextField fx:id="txtValor" layoutX="99.0" layoutY="119.0" prefHeight="25.0" prefWidth="232.0" />
+                  <TextField fx:id="txtCantidad" layoutX="98.0" layoutY="149.0" prefHeight="25.0" prefWidth="233.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="384.0" layoutY="13.0" prefHeight="218.0" prefWidth="319.0" text="Tipo de Producto">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="191.0" prefWidth="370.0">
+               <children>
+                  <RadioButton fx:id="radPerecedeo" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="Perecedero" />
+                  <RadioButton fx:id="radRefrigerado" layoutX="116.0" layoutY="23.0" mnemonicParsing="false" text="Refrigerado" />
+                  <RadioButton fx:id="radEnvasado" layoutX="220.0" layoutY="23.0" mnemonicParsing="false" text="Envasado" />
+                  <DatePicker fx:id="dpFechaVencimiento" layoutX="140.0" layoutY="55.0" prefHeight="26.0" prefWidth="158.0" />
+                  <Label layoutX="10.0" layoutY="60.0" text="Fecha de Vencimiento" />
+                  <Label layoutX="10.0" layoutY="96.0" text="Codigo Aprovación" />
+                  <TextField fx:id="txtCodigoAprovacion" layoutX="140.0" layoutY="91.0" prefHeight="24.0" prefWidth="160.0" />
+                  <Label layoutX="10.0" layoutY="127.0" text="Temperatura" />
+                  <TextField fx:id="txtTemperatura" layoutX="140.0" layoutY="123.0" prefHeight="24.0" prefWidth="160.0" />
+                  <ComboBox fx:id="cbPais" layoutX="138.0" layoutY="158.0" prefHeight="26.0" prefWidth="161.0" />
+                  <Label layoutX="10.0" layoutY="162.0" text="Pais Origen" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TableView fx:id="tableProductos" layoutX="54.0" layoutY="283.0" prefHeight="134.0" prefWidth="612.0">
+         <columns>
+            <TableColumn fx:id="tcCodigo" prefWidth="109.0" text="Codigo" />
+            <TableColumn fx:id="tcNombreProducto" prefWidth="106.0" text="Nombre" />
+            <TableColumn fx:id="tcDescripcion" prefWidth="212.0" text="Descripción" />
+            <TableColumn fx:id="tcValor" minWidth="0.0" prefWidth="83.0" text="Valor" />
+            <TableColumn fx:id="tcCantidad" prefWidth="101.0" text="Cantidad" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnRegistrarProducto" layoutX="115.0" layoutY="242.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Registrar" />
+      <Button fx:id="btnBorrarProducto" layoutX="328.0" layoutY="420.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Borrar" />
+      <Button fx:id="btnActualizarProducto" layoutX="524.0" layoutY="242.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Actualizar" />
+      <Button fx:id="btnNuevo" layoutX="338.0" layoutY="242.0" text="Nuevo" />
+   </children>
 </AnchorPane>
