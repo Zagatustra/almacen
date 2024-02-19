@@ -13,9 +13,9 @@ public class ProductoController {
         modelFactoryController=ModelFactoryController.getInstance();
     }
 
-   public List<ProductoDto> obtenerProducto(){
-        return modelFactoryController.obtenerProducto();
-    }
+   // public List<ProductoDto> obtenerProducto(){
+    //    return modelFactoryController.obtenerProducto();
+    //}
 
     public boolean agregarProducto(ProductoDto productoDto){
         return modelFactoryController.agregarProducto(productoDto);

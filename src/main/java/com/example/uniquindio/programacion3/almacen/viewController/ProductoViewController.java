@@ -109,10 +109,10 @@ public class ProductoViewController {
         tcCantidad.setCellValueFactory(cellData->new SimpleStringProperty(String.valueOf(cellData.getValue().cantidad())));
     }
 
-    private void obtenerProductos(){
+    //private void obtenerProductos(){
 
-        listaProductoDto.addAll(productoControllerService.obtenerProducto());
-    }
+      //  listaProductoDto.addAll(productoControllerService.obtenerProducto);
+    //}
 
     private void listenerSelection(){
 
