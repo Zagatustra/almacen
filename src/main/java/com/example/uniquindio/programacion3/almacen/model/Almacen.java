@@ -9,6 +9,16 @@ public class Almacen implements IAlmacenService, Serializable {
     private static final long serialVersionUID=1L;
 
     private ArrayList<Cliente> listaCliente=new ArrayList();
+
+    public ArrayList<Producto> getListaProductos() {
+        return listaProductos;
+    }
+
+    public void setListaProductos(ArrayList<Producto> listaProductos) {
+        this.listaProductos = listaProductos;
+    }
+
+    private ArrayList<Producto> listaProductos=new ArrayList<>();
     private Natural n1= new Natural("a","","","1","","",null);
     private Natural n2= new Natural("b","","","2","","",null);
 
@@ -39,4 +49,22 @@ public class Almacen implements IAlmacenService, Serializable {
         }
         return existe;
     }
+
+    //metodos Productos
+
+    public void agregarProducto(Producto nuevoProducto){
+        getListaProductos().add(nuevoProducto);
+    }
+
+    public boolean verificarProductoExistente(String codigo) {
+        boolean existe = false;
+        for (Producto producto : getListaProductos()) {
+            if (producto.getCodigo().equals(codigo)) {
+                existe = true;
+                break;
+            }
+        }
+        return existe;
+    }
+
 }

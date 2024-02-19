@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -11,7 +13,7 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="461.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="461.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uniquindio.programacion3.almacen.viewController.ProductoViewController">
    <children>
       <TitledPane animated="false" layoutX="14.0" layoutY="14.0" prefHeight="217.0" prefWidth="350.0" text="Datos del Producto">
          <content>
@@ -44,7 +46,19 @@
                   <TextField fx:id="txtCodigoAprovacion" layoutX="140.0" layoutY="91.0" prefHeight="24.0" prefWidth="160.0" />
                   <Label layoutX="10.0" layoutY="127.0" text="Temperatura" />
                   <TextField fx:id="txtTemperatura" layoutX="140.0" layoutY="123.0" prefHeight="24.0" prefWidth="160.0" />
-                  <ComboBox fx:id="cbPais" layoutX="138.0" layoutY="158.0" prefHeight="26.0" prefWidth="161.0" />
+                  <ComboBox fx:id="cbPais" layoutX="138.0" layoutY="158.0" prefHeight="26.0" prefWidth="161.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Argentina" />
+                           <String fx:value="Brasil" />
+                           <String fx:value="Colombia" />
+                           <String fx:value="Ecuador" />
+                           <String fx:value="Perú" />
+                           <String fx:value="Uruguay" />
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+
                   <Label layoutX="10.0" layoutY="162.0" text="Pais Origen" />
                </children>
             </AnchorPane>
@@ -59,9 +73,9 @@
             <TableColumn fx:id="tcCantidad" prefWidth="101.0" text="Cantidad" />
          </columns>
       </TableView>
-      <Button fx:id="btnRegistrarProducto" layoutX="115.0" layoutY="242.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Registrar" />
-      <Button fx:id="btnBorrarProducto" layoutX="328.0" layoutY="420.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Borrar" />
-      <Button fx:id="btnActualizarProducto" layoutX="524.0" layoutY="242.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Actualizar" />
-      <Button fx:id="btnNuevo" layoutX="338.0" layoutY="242.0" text="Nuevo" />
+      <Button fx:id="btnRegistrarProducto" layoutX="115.0" layoutY="242.0" mnemonicParsing="false" onAction="#registrarProductoAction" prefHeight="26.0" prefWidth="72.0" text="Registrar" />
+      <Button fx:id="btnBorrarProducto" layoutX="328.0" layoutY="420.0" mnemonicParsing="false" onAction="#borrarProductoAction" prefHeight="26.0" prefWidth="72.0" text="Borrar" />
+      <Button fx:id="btnActualizarProducto" layoutX="524.0" layoutY="242.0" mnemonicParsing="false" onAction="#actualizarProductoAction" prefHeight="26.0" prefWidth="72.0" text="Actualizar" />
+      <Button fx:id="btnNuevo" layoutX="338.0" layoutY="242.0" onAction="#nuevoProductoAction" text="Nuevo" />
    </children>
 </AnchorPane>

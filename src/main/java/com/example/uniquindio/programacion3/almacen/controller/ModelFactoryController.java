@@ -2,9 +2,13 @@ package com.example.uniquindio.programacion3.almacen.controller;
 
 import com.example.uniquindio.programacion3.almacen.controller.service.IModelFactoryService;
 import com.example.uniquindio.programacion3.almacen.mapping.dto.ClienteDto;
+import com.example.uniquindio.programacion3.almacen.mapping.dto.ProductoDto;
 import com.example.uniquindio.programacion3.almacen.mapping.mapper.MapperAlmacen;
 import com.example.uniquindio.programacion3.almacen.model.Almacen;
+import com.example.uniquindio.programacion3.almacen.model.Producto;
 import com.example.uniquindio.programacion3.almacen.util.AlmacenUtils;
+
+import java.util.List;
 
 public class ModelFactoryController implements IModelFactoryService,Runnable
 {
@@ -40,4 +44,25 @@ public class ModelFactoryController implements IModelFactoryService,Runnable
     public Almacen getAlmacen(){
        return almacen;
     }
+
+
+    //model Productos
+  //  public List<ProductoDto>obtenerProducto(){
+    //    return mapper.getProductoDto(almacen.get);
+    //}
+
+    public boolean agregarProducto(ProductoDto productoDto){
+        try{
+            if(!(almacen.verificarProductoExistente(productoDto.codigo()))) {
+                Producto producto = mapper.productoDtoToProducto(productoDto);
+                getAlmacen().agregarProducto(producto);
+            }
+                return true;
+        }catch (Exception e){
+            e.getMessage();
+            return false;
+        }
+    }
+
+
 }
