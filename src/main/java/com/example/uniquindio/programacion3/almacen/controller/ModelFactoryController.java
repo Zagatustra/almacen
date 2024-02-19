@@ -111,9 +111,9 @@ public class ModelFactoryController implements IModelFactoryService,Runnable
 
 
     //model Productos
-  //  public List<ProductoDto>obtenerProducto(){
-    //    return mapper.getProductoDto(almacen.get);
-    //}
+    public List<ProductoDto>obtenerProducto(){
+        return mapper.getProductosDto(almacen.getListaProductos());
+    }
 
     public boolean agregarProducto(ProductoDto productoDto){
         try{
