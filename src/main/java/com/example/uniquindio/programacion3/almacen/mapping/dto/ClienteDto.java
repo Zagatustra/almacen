@@ -6,4 +6,9 @@ public record ClienteDto (
     String apellido,
     String direccion,
     String identificacion,
-    String fecNac){}
+    String tel,
+    String fecNac,
+    String email,
+    String nit){
+
+}
