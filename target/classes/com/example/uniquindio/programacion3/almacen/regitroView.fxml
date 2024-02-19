@@ -10,11 +10,14 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
+
+
 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uniquindio.programacion3.almacen.viewController.RegistroViewController">
                             <children>
                                 <Button fx:id="registrarUsuario" layoutX="444.0" layoutY="208.0" mnemonicParsing="false" onAction="#confirmarRegistro" prefHeight="25.0" prefWidth="82.0" text="Registrar" />
                                 <Button fx:id="borrarUsuario" layoutX="537.0" layoutY="208.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="25.0" prefWidth="74.0" text="Borrar" />
                                 <Button fx:id="actualizarUsuario" layoutX="625.0" layoutY="208.0" mnemonicParsing="false" onAction="#actualizarCliente" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+
 
                                 <TitledPane animated="false" layoutX="27.0" layoutY="22.0" prefHeight="225.0" prefWidth="377.0" text="Datos personales">
                           <content>
