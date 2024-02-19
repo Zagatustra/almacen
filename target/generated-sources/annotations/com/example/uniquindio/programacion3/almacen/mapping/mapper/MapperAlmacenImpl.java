@@ -10,7 +10,7 @@ import java.util.List;
 /*
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-02-18T23:30:08-0500",
+    date = "2024-02-19T00:42:11-0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.2 (Oracle Corporation)"
 )
 */
