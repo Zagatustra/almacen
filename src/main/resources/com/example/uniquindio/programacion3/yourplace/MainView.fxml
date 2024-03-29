@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.*?>
+
+
+<TabPane prefHeight="600.0" prefWidth="750.0" styleClass="root" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<cursor>
+    <Cursor fx:constant="HAND"/>
+</cursor>
+<Tab text="Registrar">
+    <fx:include source="regitroView.fxml"/>
+</Tab>
+<Tab text="Productos">
+    <fx:include source="productoView.fxml"/>
+</Tab>
+</TabPane>

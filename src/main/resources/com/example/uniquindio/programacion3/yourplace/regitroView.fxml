@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="416.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uniquindio.programacion3.yourplace.viewController.RegistroViewController">
+                            <children>
+                                <Button fx:id="registrarUsuario" layoutX="442.0" layoutY="67.0" mnemonicParsing="false" onAction="#confirmarRegistro" prefHeight="25.0" prefWidth="82.0" text="Registrar" />
+                                <Button fx:id="borrarUsuario" layoutX="446.0" layoutY="110.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="25.0" prefWidth="74.0" text="Borrar" />
+                                <Button fx:id="actualizarUsuario" layoutX="443.0" layoutY="157.0" mnemonicParsing="false" onAction="#actualizarCliente" prefHeight="25.0" prefWidth="80.0" text="Actualizar" />
+
+                                <TitledPane animated="false" layoutX="27.0" layoutY="22.0" prefHeight="207.0" prefWidth="377.0" text="Datos personales">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="375.0">
+                                 <children>
+
+                                    <Label layoutX="25.0" layoutY="41.0" text="Nombre: " />
+                                    <Label layoutX="25.0" layoutY="81.0" text="Identificación: " />
+                                    <Label layoutX="24.0" layoutY="123.0" text="Email:" />
+                                    <TextField fx:id="txtFldNombre" layoutX="108.0" layoutY="37.0" prefHeight="25.0" prefWidth="235.0" />
+                                    <TextField fx:id="txtFldIdentificacion" layoutX="108.0" layoutY="79.0" prefHeight="25.0" prefWidth="235.0" />
+                                    <TextField fx:id="txtFldEmail" layoutX="109.0" layoutY="119.0" prefHeight="25.0" prefWidth="234.0" />
+                                 </children></AnchorPane>
+                          </content>
+                        </TitledPane>
+                                                <TableView fx:id="tableUsuarios" layoutX="28.0" layoutY="264.0" prefHeight="134.0" prefWidth="520.0">
+                          <columns>
+                            <TableColumn fx:id="tcNombre" prefWidth="158.0" text="Nombre" />
+                            <TableColumn fx:id="tcIdentificacion" prefWidth="155.0" text="Identificación" />
+                            <TableColumn fx:id="tcEmail" prefWidth="200.0" text="Email" />
+                          </columns>
+                        </TableView>
+                            </children>
+                        </AnchorPane>
